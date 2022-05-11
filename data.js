@@ -3,4 +3,9 @@ const car = {
     color : "black"
 };
 
-module.exports = car;
+module.exports = {
+    favoriteCar: car,
+    sayHello(){
+        console.log("hahahaha")
+    }
+};
