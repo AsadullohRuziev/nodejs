@@ -5,7 +5,7 @@ var fs = require('fs')
 
 
 //create a file named mynewfile1.txt:
-fs.appendFile('mynewfile.txt', 'Hello content!', function (err) {
+fs.unlink('mywriteFilefile.txt', function (err) {
     if (err) throw err;
-    console.log('Saved!');
+    console.log('deleted!');
   });
