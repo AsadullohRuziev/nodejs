@@ -1,9 +1,6 @@
-console.log("hello world", __filename);
-console.log("hello world", __dirname);
+// Node.js Core Modules
 
 
-const data = require("./data");
+var log = require('./log.js');
 
-console.log(data)
-console.log(data.favoriteCar)
-data.sayHello();
+log.info("Nodejs started")
