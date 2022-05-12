@@ -4,8 +4,8 @@ var fs = require('fs')
 
 
 
-//create a file named mynewfile1.txt:
-fs.unlink('mywriteFilefile.txt', function (err) {
+//rename a file named mynewfile1.txt:
+fs.rename('mynewfile.txt', 'rename.txt', function (err) {
     if (err) throw err;
-    console.log('deleted!');
+    console.log('Rename!');
   });
