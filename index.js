@@ -1,16 +1,15 @@
-// Node.js Events
+// Node.js Upload Files
+// The Formidable Module
 
+var formidable = require('formidable');
 
-var events = require('events');
-var eventEmitter = new events.EventEmitter();
+var http = require('http');
 
-//Create an event handler:
-var myEventHandler = function () {
-  console.log('I hear a scream!');
-}
-
-//Assign the event handler to an event:
-eventEmitter.on('scream', myEventHandler);
-
-//Fire the 'scream' event:
-eventEmitter.emit('scream');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
+  res.write('<input type="file" name="filetoupload"><br>');
+  res.write('<input type="submit">');
+  res.write('</form>');
+  return res.end();
+}).listen(8080);
